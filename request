@@ -1,0 +1,29 @@
+POST http://localhost:8080/users/
+content-type: application/json
+
+{
+    "name": "Islan Pedro",
+    "username": "islan01",
+    "password": "12345"
+}
+
+POST http://localhost:8080/tasks/
+Authorization: Basic islan01:12345
+content-type: application/json
+
+{
+    "description": "Tarefa para gravar aula de tasks no curso de Spring Boot",
+    "title": "Gravação de aulaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "priority": "ALTA",
+    "startAt": "2023-10-17T12:30:00",
+    "endAt": "2023-10-17T15:35:00"
+}
+
+PUT http://localhost:8080/tasks/52d73723-7925-4e03-8c04-d7d645a13cdb
+Authorization: Basic islan01:12345
+content-type: application/json
+
+{
+    "priority": "BAIXA"
+    
+}
